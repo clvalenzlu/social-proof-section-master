@@ -15,9 +15,9 @@ html {
 }
 
 
-body {
-    margin: 0px;
-    padding: 0px;
+html, body {
+    margin: 0;
+    padding: 0;
     font-family: 'Spartan', sans-serif;
     overflow-x: hidden;
     
@@ -127,15 +127,15 @@ body::after {
     margin-left: 45px;
 }  
 
-.text-opinion {
+.flex-container .text-opinion {
     display: flex;
     width: 75%;
     margin: -40px 145px 100px;
 }
 
-.text-opinion .text-opinion-box1,
-.text-opinion .text-opinion-box2,
-.text-opinion .text-opinion-box3 {
+.flex-container .text-opinion .text-opinion-box1,
+.flex-container .text-opinion .text-opinion-box2,
+.flex-container .text-opinion .text-opinion-box3 {
     border: 1px solid black;
     border-radius: 8px;
     background-color: var(--primary-color);
@@ -143,30 +143,30 @@ body::after {
     margin: 10px;
 }
 
-.text-opinion .text-opinion-box1 {
+.flex-container .text-opinion .text-opinion-box1 {
     margin-bottom: 40px;
 }
 
 
-.text-opinion .text-opinion-box2 {
+.flex-container .text-opinion .text-opinion-box2 {
     margin-top: 30px;
 }
 
-.text-opinion .text-opinion-box3 {
+.flex-container .text-opinion .text-opinion-box3 {
     margin-top: 50px;
 }
 
-.text-opinion .text-opinion-box2 {
+.flex-container .text-opinion .text-opinion-box2 {
     margin-bottom: 30px;
 }
 
-.text-opinion .text-opinion-box3 {
+.flex-container .text-opinion .text-opinion-box3 {
     margin-bottom: 20px;
 }
 
-.text-opinion .text-opinion-box1 .text-opinion-box1-image,
-.text-opinion .text-opinion-box2 .text-opinion-box2-image,
-.text-opinion .text-opinion-box3 .text-opinion-box3-image {
+.flex-container .text-opinion .text-opinion-box1 .text-opinion-box1-image,
+.flex-container .text-opinion .text-opinion-box2 .text-opinion-box2-image,
+.flex-container .text-opinion .text-opinion-box3 .text-opinion-box3-image {
     display: flex;
     align-items: flex-start;
     height: 40px;
@@ -177,57 +177,57 @@ body::after {
     margin: 25px 42px -42px;   
 }
 
-.text-opinion .text-opinion-box1 .text-opinion-box1-image {
+.flex-container .text-opinion .text-opinion-box1 .text-opinion-box1-image {
     background: url(./images/image-colton.jpg) no-repeat left center;
     background-size: 100%
 }
 
-.text-opinion .text-opinion-box2 .text-opinion-box2-image {
+.flex-container .text-opinion .text-opinion-box2 .text-opinion-box2-image {
     background: url(./images/image-irene.jpg) no-repeat left center;
     background-size: 100%
 }
 
-.text-opinion .text-opinion-box3 .text-opinion-box3-image {
+.flex-container .text-opinion .text-opinion-box3 .text-opinion-box3-image {
     background: url(./images/image-anne.jpg) no-repeat left center;
     background-size: 100%
 }
 
-.text-opinion .text-opinion-box1 h2,h3,h4,
-.text-opinion .text-opinion-box2 h2,h3,h4,
-.text-opinion .text-opinion-box3 h2,h3,h4 {
+.flex-container .text-opinion .text-opinion-box1 h2,h3,h4,
+.flex-container .text-opinion .text-opinion-box2 h2,h3,h4,
+.flex-container .text-opinion .text-opinion-box3 h2,h3,h4 {
     font-weight: 400;
     font-size: 12px;
     text-align: center;
 }
 
-.text-opinion .text-opinion-box1 h2,h3,
-.text-opinion .text-opinion-box2 h2,h3,
-.text-opinion .text-opinion-box3 h2,h3 {
+.flex-container .text-opinion .text-opinion-box1 h2,h3,
+.flex-container .text-opinion .text-opinion-box2 h2,h3,
+.flex-container .text-opinion .text-opinion-box3 h2,h3 {
     margin: 5px;
     margin-right: 50px;
 }
 
-.text-opinion .text-opinion-box1 h4,
-.text-opinion .text-opinion-box2 h4,
-.text-opinion .text-opinion-box3 h4 {
+.flex-container .text-opinion .text-opinion-box1 h4,
+.flex-container .text-opinion .text-opinion-box2 h4,
+.flex-container .text-opinion .text-opinion-box3 h4 {
     padding: 20px 25px;
 }
 
-.text-opinion .text-opinion-box1 h2,
-.text-opinion .text-opinion-box2 h2,
-.text-opinion .text-opinion-box3 h2 {
+.flex-container .text-opinion .text-opinion-box1 h2,
+.flex-container .text-opinion .text-opinion-box2 h2,
+.flex-container .text-opinion .text-opinion-box3 h2 {
     color: var(--light-color);
 }
 
-.text-opinion .text-opinion-box1 h3,
-.text-opinion .text-opinion-box2 h3,
-.text-opinion .text-opinion-box3 h3 {
+.flex-container .text-opinion .text-opinion-box1 h3,
+.flex-container .text-opinion .text-opinion-box2 h3,
+.flex-container .text-opinion .text-opinion-box3 h3 {
     color: var(--secondary-color);
 }
 
-.text-opinion .text-opinion-box1 h4,
-.text-opinion .text-opinion-box2 h4,
-.text-opinion .text-opinion-box3 h4 {
+.flex-container .text-opinion .text-opinion-box1 h4,
+.flex-container .text-opinion .text-opinion-box2 h4,
+.flex-container .text-opinion .text-opinion-box3 h4 {
     color: var(--white-color);
 }
 
@@ -241,19 +241,27 @@ body::after {
     margin-top: -37px;
 }
 
-  .attribution a {
+.attribution a {
     color: hsl(228, 45%, 44%);
 }
+
+/*--Para responsivo mobile --*/
 
 @media all and (max-width: 768px) {
 
     body::before {
-       
+        width: 100%;
+        height: 80%;
+        top: 0;
+        left: -1%;
     }    
     
+    /*
     body::after {
         
     } 
+
+    */
 
     .flex-container .flex-content {
         display: flex;
@@ -268,34 +276,27 @@ body::after {
 
     
     .flex-container .flex-content .text-intro h1 {
-    font-weight: 700;
-    font-size: 40px;
-    color: var(--primary-color);
-    margin-bottom: -10px;
-    padding: 5px 49px;
-    margin-left: -2px;
-    text-align: center;
+        margin-bottom: -10px;
+        padding: 5px 49px;
+        margin-left: -2px;
+        text-align: center;
     }
  
     .flex-container .flex-content .text-intro h2 {
-        font-weight: 400;
-        color: var(--tertiary-color);
         font-size: 15px;
         padding: 10px 73px;
         margin-left: 5px;
         text-align: center;
     }
-
-
     
     .flex-container .flex-content .start-category {
         display: flex;
         flex-flow: column;
         margin-top: -50px;
-        width: 90%;
+        width: 80%;
+        margin-left: 30px;
         margin-bottom: 78px;
     }
-
 
     .flex-container .flex-content .start-category .category-1, 
     .flex-container .flex-content .start-category .category-2, 
@@ -319,88 +320,60 @@ body::after {
     .flex-container .text-opinion {
         display: flex;
         flex-flow: column;
-        width: 70%;
-        margin: -40px 160px 100px;
+        width: 75%;
+        margin: -40px 172px 100px;
+
     }
  
-    .text-opinion .text-opinion-box2 {
+    .flex-container .text-opinion .text-opinion-box1, 
+    .flex-container .text-opinion .text-opinion-box2, 
+    .flex-container .text-opinion .text-opinion-box3 {
+        width: 400px;
+    }
+
+    .flex-container .text-opinion .text-opinion-box2 {
         margin-bottom: -30px;
         margin-top: -20px;
     }
 
 
-    .text-opinion .text-opinion-box3 {
+    .flex-container .text-opinion .text-opinion-box3 {
         margin-bottom: 20px;
     }
 
-    .text-opinion .text-opinion-box3 {
+    .flex-container .text-opinion .text-opinion-box3 {
         margin-top: 50px;
     }
 
-    .text-opinion .text-opinion-box1 .text-opinion-box1-image, 
-    .text-opinion .text-opinion-box2 .text-opinion-box2-image, 
-    .text-opinion .text-opinion-box3 .text-opinion-box3-image {
-        display: flex;
-        align-items: flex-start;
-        height: 40px;
-        width: 40px;
-        -moz-border-radius: 50px;
-        border-radius: 200px;
-        margin: 25px 100px -45px
+    .flex-container .text-opinion .text-opinion-box1 .text-opinion-box1-image, 
+    .flex-container .text-opinion .text-opinion-box2 .text-opinion-box2-image, 
+    .flex-container .text-opinion .text-opinion-box3 .text-opinion-box3-image {
+        margin: 40px 42px -45px;
     }
  
-    .text-opinion .text-opinion-box1 h2, h3, h4, 
-    .text-opinion .text-opinion-box2 h2, h3, h4, 
-    .text-opinion .text-opinion-box3 h2, h3, h4 {
-        font-weight: 400;
+    .flex-container .text-opinion .text-opinion-box1 h2, h3, h4, 
+    .flex-container .text-opinion .text-opinion-box2 h2, h3, h4, 
+    .flex-container .text-opinion .text-opinion-box3 h2, h3, h4 {
         font-size: 15px;
-        text-align: center;
+    }
+
+    .flex-container .text-opinion .text-opinion-box1 h2, h3, 
+    .flex-container .text-opinion .text-opinion-box2 h2, h3, 
+    .flex-container .text-opinion .text-opinion-box3 h2, h3 {
+        margin-right: 80px;
     }
  
+    .flex-container .text-opinion .text-opinion-box1 h4,
+    .flex-container .text-opinion .text-opinion-box2 h4,
+    .flex-container .text-opinion .text-opinion-box3 h4 {
+        padding: 20px 44px;
+        text-align: start;
+    }
 
     .attribution {
-        font-size: 11px;
-        position: absolute;
-        text-align: center;
-        z-index: 2;
-        left: 50%;
-        transform: translate(-50%);
-        margin-top: -37px;
+       margin-top: -30px;
     }
-
-
 }
 
 
-    
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-}
