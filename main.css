@@ -255,13 +255,13 @@ body::after {
         top: 0;
         left: -1%;
     }    
-    
-    /*
-    body::after {
-        
-    } 
 
-    */
+    body::after {
+        width: 115%;
+        height: 150%;
+        top: 21%;
+        left: -90%
+    } 
 
     .flex-container .flex-content {
         display: flex;
